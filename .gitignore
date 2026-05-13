@@ -1,0 +1,41 @@
+# Local environments and secrets
+.env
+.env.*
+!.env.example
+
+# Python/runtime caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Generated data and model artifacts
+*.npy
+*.npz
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.csv
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.mp3
+*.wav
+*.avi
+*.flac
+
+# LLaMA-Factory runtime outputs
+LLaMA-Factory/saves/
+LLaMA-Factory/output/
+LLaMA-Factory/wandb/
+LLaMA-Factory/lightning_logs/
+LLaMA-Factory/unsloth_compiled_cache/
+LLaMA-Factory/build/
+LLaMA-Factory/.env.local
+
+# Large local training datasets
+LLaMA-Factory/data/mitbih_ecg_peaks_train_processed.json

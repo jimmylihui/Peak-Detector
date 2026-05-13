@@ -1,0 +1,12 @@
+### model
+model_name_or_path: /path/to/workspace/project-BCG-LLM/combined_data/LLM_model/arrhymia/qwen2.5-3b_full_9000_continue_R_peak_BCG_peaks_arrhy/full/sft
+template: qwen
+trust_remote_code: true
+
+### export
+export_dir: output/qwen2_5_3b_awq
+export_quantization_bit: 4
+export_quantization_dataset: /path/to/workspace/project-BCG-LLM/LLaMA-Factory/data/bcg_peaks_arrhy_train_gptq.json
+export_size: 5
+export_device: auto # choices: [cpu, auto]
+export_legacy_format: false

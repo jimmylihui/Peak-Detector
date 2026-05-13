@@ -1,0 +1,60 @@
+{
+  "dataset_info": {
+    "total_subjects": 42,
+    "train_subjects": 33,
+    "test_subjects": 9,
+    "test_size": 0.2,
+    "random_state": 42,
+    "sampling_rate": 300,
+    "max_segments_per_subject": null
+  },
+  "subject_splits": {
+    "train": [
+      "0009_8min",
+      "0015_8min",
+      "0016_8min",
+      "0018_8min",
+      "0028_8min",
+      "0029_8min",
+      "0030_8min",
+      "0032_8min",
+      "0035_8min",
+      "0038_8min",
+      "0103_8min",
+      "0105_8min",
+      "0115_8min",
+      "0121_8min",
+      "0122_8min",
+      "0123_8min",
+      "0127_8min",
+      "0128_8min",
+      "0133_8min",
+      "0134_8min",
+      "0142_8min",
+      "0149_8min",
+      "0150_8min",
+      "0312_8min",
+      "0313_8min",
+      "0322_8min",
+      "0325_8min",
+      "0328_8min",
+      "0329_8min",
+      "0330_8min",
+      "0331_8min",
+      "0333_8min",
+      "0370_8min"
+    ],
+    "test": [
+      "0023_8min",
+      "0031_8min",
+      "0104_8min",
+      "0125_8min",
+      "0147_8min",
+      "0148_8min",
+      "0309_8min",
+      "0311_8min",
+      "0332_8min"
+    ]
+  },
+  "processing_timestamp": "2025-09-07T20:48:07.899257"
+}

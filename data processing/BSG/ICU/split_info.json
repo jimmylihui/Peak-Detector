@@ -1,0 +1,25 @@
+{
+  "train_subjects": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    15,
+    19,
+    20,
+    21
+  ],
+  "test_subjects": [
+    4,
+    5,
+    14
+  ],
+  "train_samples": 41159,
+  "test_samples": 5375,
+  "test_ratio": 0.2,
+  "random_seed": 42
+}

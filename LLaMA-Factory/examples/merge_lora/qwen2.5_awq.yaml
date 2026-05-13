@@ -1,0 +1,11 @@
+
+### model
+model_name_or_path: Qwen/Qwen2.5-3B-Instruct-AWQ
+adapter_name_or_path: /path/to/workspace/project-BCG-LLM/LLaMA-Factory/saves/qwen2.5-3b_full_9000_continue_R_peak_BCG_peaks_arrhy_awq_4bit/full/sft
+template: qwen
+trust_remote_code: true
+### export
+export_dir: output/qwen2_5_awq
+export_size: 5
+export_device: cpu  # choices: [cpu, auto]
+export_legacy_format: false
