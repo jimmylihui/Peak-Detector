@@ -1,7 +1,5 @@
 # Peak-Detector
 
-Clean workspace for the peak-detection project associated with `2025_Nov_Ubicomp_peak_r1_clean (7).pdf`.
-
 The repository is organized around three reproducible pieces:
 
 1. Raw/processed data preparation for baseline arrays.
@@ -10,12 +8,14 @@ The repository is organized around three reproducible pieces:
 
 ## Repository Layout
 
-| Folder | Purpose |
-| --- | --- |
+
+| Folder             | Purpose                                                                                                                                            |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `data processing/` | Code-only pipeline scripts for downloading/checking datasets, extracting raw data, processing signals, and generating baseline-ready NumPy arrays. |
-| `formatter/` | Dataset formatter scripts copied only from `project-BCG-LLM/combined_data/formatter`, assigned into dataset folders. |
-| `based baseline/` | Cleaned baseline method implementations and dataset test entrypoints. |
-| `LLaMA-Factory/` | Training framework area from the original project. |
+| `formatter/`       | Dataset formatter scripts copied only from `project-BCG-LLM/combined_data/formatter`, assigned into dataset folders.                               |
+| `based baseline/`  | Cleaned baseline method implementations and dataset test entrypoints.                                                                              |
+| `LLaMA-Factory/`   | Training framework area from the original project.                                                                                                 |
+
 
 Generated arrays, checkpoints, plots, prediction files, result tables, notebooks, caches, and copied datasets are intentionally excluded from the cleaned folders.
 
@@ -42,11 +42,9 @@ python "data processing/download_data.py" --dataset kansas
 python "data processing/download_data.py" --dataset arrhythmia
 ```
 
-2. Run dataset-specific data-processing scripts to create baseline arrays such as `X_train.npy`, `y_train.npy`, `X_val.npy`, `y_val.npy`, `X_test.npy`, and `y_test.npy`.
-
-3. Use `formatter/` scripts when prompt-style formatted datasets are needed.
-
-4. Run baseline methods from `based baseline/`.
+1. Run dataset-specific data-processing scripts to create baseline arrays such as `X_train.npy`, `y_train.npy`, `X_val.npy`, `y_val.npy`, `X_test.npy`, and `y_test.npy`.
+2. Use `formatter/` scripts when prompt-style formatted datasets are needed.
+3. Run baseline methods from `based baseline/`.
 
 ## Peak-Detector LLaMA-Factory Experiment
 
@@ -74,26 +72,30 @@ This LLaMA-Factory checkout expects compatible package versions from its `requir
 
 ## Included Datasets
 
-| Modality | Dataset folders |
-| --- | --- |
-| ECG | MIT-BIH, INCART |
-| PPG | BIDMC, CapnoBase |
-| BCG | Kansas, BCG Arrhythmia |
-| BSG | ICU BSG, Hospital BSG |
+
+| Modality | Dataset folders        |
+| -------- | ---------------------- |
+| ECG      | MIT-BIH, INCART        |
+| PPG      | BIDMC, CapnoBase       |
+| BCG      | Kansas, BCG Arrhythmia |
+| BSG      | ICU BSG, Hospital BSG  |
+
 
 ## Manual Dataset Links
 
 Some datasets require manual access or do not have stable direct-download URLs. The most important manual paths are also listed in `data processing/README.md`.
 
-| Dataset | Source |
-| --- | --- |
-| CapnoBase | https://doi.org/10.5683/SP2/NLB8IT |
-| CapnoBase | https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP2/NLB8IT |
-| Kansas BCG original | https://doi.org/10.21227/77hc-py84 |
-| Kansas BCG original | https://ieee-dataport.org/open-access/bed-based-ballistocardiography-dataset |
-| Kansas BCG processed copy | https://springernature.figshare.com/articles/dataset/BCG_dataset/20496234 |
-| BCG Arrhythmia / Multi-Pathology BCG | https://doi.org/10.6084/m9.figshare.28416896 |
-| BCG Arrhythmia / Multi-Pathology BCG | https://springernature.figshare.com/articles/dataset/A_Multi-Pathology_Ballistocardiogram_Dataset_for_Cardiac_Function_Monitoring_and_Arrhythmia_Assessment/28416896 |
+
+| Dataset                              | Source                                                                                                                                                                                                                                                                                                                                       |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CapnoBase                            | [https://doi.org/10.5683/SP2/NLB8IT](https://doi.org/10.5683/SP2/NLB8IT)                                                                                                                                                                                                                                                                     |
+| CapnoBase                            | [https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP2/NLB8IT](https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP2/NLB8IT)                                                                                                                                                                                       |
+| Kansas BCG original                  | [https://doi.org/10.21227/77hc-py84](https://doi.org/10.21227/77hc-py84)                                                                                                                                                                                                                                                                     |
+| Kansas BCG original                  | [https://ieee-dataport.org/open-access/bed-based-ballistocardiography-dataset](https://ieee-dataport.org/open-access/bed-based-ballistocardiography-dataset)                                                                                                                                                                                 |
+| Kansas BCG processed copy            | [https://springernature.figshare.com/articles/dataset/BCG_dataset/20496234](https://springernature.figshare.com/articles/dataset/BCG_dataset/20496234)                                                                                                                                                                                       |
+| BCG Arrhythmia / Multi-Pathology BCG | [https://doi.org/10.6084/m9.figshare.28416896](https://doi.org/10.6084/m9.figshare.28416896)                                                                                                                                                                                                                                                 |
+| BCG Arrhythmia / Multi-Pathology BCG | [https://springernature.figshare.com/articles/dataset/A_Multi-Pathology_Ballistocardiogram_Dataset_for_Cardiac_Function_Monitoring_and_Arrhythmia_Assessment/28416896](https://springernature.figshare.com/articles/dataset/A_Multi-Pathology_Ballistocardiogram_Dataset_for_Cardiac_Function_Monitoring_and_Arrhythmia_Assessment/28416896) |
+
 
 ## Verification Status
 
@@ -103,12 +105,3 @@ The cleaned folders were checked after organization:
 - `formatter/`: 8 formatter scripts compile.
 - `based baseline/`: 162 baseline Python scripts compile.
 
-## Notes
-
-Many scripts still reference the original project data root:
-
-```text
-/path/to/workspace/project-BCG-LLM
-```
-
-This keeps the copied code consistent with the existing local workspace. If moving the repository to another machine, update those paths or add a shared config layer before running the pipelines.
